@@ -1,0 +1,19 @@
+{
+  "vehicles": [
+    {
+      "vehicle": "Car",
+      "ownerName": "Dani Agus",
+      "details": "choque puerta delantera"
+    },
+    {
+      "vehicle": "Airplane",
+      "ownerName": "Agus Dani",
+      "details": "ala rota"
+    },
+    {
+      "vehicle": "Bike",
+      "ownerName": "Ben Stiller",
+      "details": "rueda pinchada"
+    }
+  ]
+}
