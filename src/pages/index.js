@@ -1,38 +1,27 @@
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import fetch from "isomorphic-unfetch";
+import {Grid, Button} from '@material-ui/core';
+import Header from '../../components/Header';
 
 export default function List() {
-  
-    // const [user, setUsers] = useState([]);
 
     const topFive = ["GrahamCampbell","fabpot","weierophinney","rkh","josh"];
 
-    // useEffect(() => {
-    //   async function loadData() {
-    //     const response = await fetch(
-    //       "https://api.github.com/users/GrahamCampbell"
-    //     );
-    //     const user = await response.json();
-    //     setUsers(user);
-    //   }
-
-    //   loadData();
-    // }, []);
-
   return (
     <div>
+      <Header />
       <h1>Top 5 GitHub Users</h1>
       <h2>Tap the username to see more information</h2>
+      <Grid container spacing={1}>
       {topFive.map((user, index) => (
-        <div key={index}>
+        <Grid item xs={6} md={6} key={index}>
           <Link as={`/Person/${user}`} href="/Person/[person]">
-            <a>
+            <Button variant="contained" color="primary" href="/Person/[person]">
               {user}
-            </a>
+            </Button>
           </Link>
-        </div>
+        </Grid>
       ))}
+      </Grid>
     </div>
   );
 }
