@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router'
 //import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import { Image } from "@chakra-ui/react"
+import Header from '../../../components/Header'
+import { Image , Avatar} from "@chakra-ui/react"
 
 const Person = () => {
     const [user, setUsers] = useState([]);   
@@ -23,8 +24,9 @@ const Person = () => {
     return (
         <>
             {console.log(user)}
+            <Header />
             <Image
-                borderRadius="full"
+                borderRadius="half"
                 boxSize="150px"
                 src={user.avatar_url}
                 alt={user.name}
